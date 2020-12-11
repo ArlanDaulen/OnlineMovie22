@@ -1,0 +1,40 @@
+{
+  "Adventure": [
+    {
+      "id": "1",
+      "name": "Годзилла(2014)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607501640-159682901.jpg"
+    },{
+      "id": "2",
+      "name": "Безумные начала(2019)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-11/1606124570-1051241304.jpg"
+    },{
+      "id": "3",
+      "name": "Наруто: Ураганные хроники (2007)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607417023-1625721255.jpg"
+    },{
+      "id": "4",
+      "name": "Солдатики (1998)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607416559-1921628830.jpg"
+    },{
+      "id": "5",
+      "name": "127 часов (2010)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607414992-93937300.jpg"
+    },{
+      "id": "6",
+      "name": "Небесный замок Лапута (1986)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607336033-1168839252.jpg"
+    },{
+      "id": "7",
+      "name": "Секретная служба Санта-Клауса (2011)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607335162-875601888.jpg"
+    },{
+      "id": "8",
+      "name": "Рэмбо: Первая кровь 2 (1985)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1607416028-968984351.jpg"
+    },{
+      "id": "9",
+      "name": "Игра Эндера (2013)",
+      "url": "https://kinogo-net.org/v7/uploads/posts/2020-12/1606977131-1363540319.jpg"
+    }]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body class="text-center">
+<div class="container">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Email address" required="" autofocus="" [(ngModel)]="user.email"/>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required="" [(ngModel)]="user.password"/>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button  class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit(user)">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">{{date | date | uppercase}}</p>
+
+  </form>
+<!--  <table>-->
+<!--    <tr *ngFor="let i of polzovateli">-->
+<!--      <td>{{i}}</td>-->
+<!--    </tr>-->
+<!--  </table>-->
+  <!--  <div *ngIf="done">-->
+  <!--    <div>Получено от сервера:</div>-->
+  <!--    <div>Имя: {{receivedUser.email}}</div>-->
+  <!--    <div>Возраст: {{receivedUser.password}}</div>-->
+  <!--  </div>-->
+</div>
+</body>
+</html>

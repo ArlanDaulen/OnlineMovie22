@@ -1,0 +1,118 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Arlan",
+      "surname": "Daulen",
+      "email": "er@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "wd",
+      "surname": "wd",
+      "email": "ew",
+      "password": "we",
+      "id": 5
+    },
+    {
+      "email": "ew",
+      "password": "we",
+      "id": 6
+    },
+    {
+      "email": "ew",
+      "password": "we",
+      "id": 7
+    },
+    {
+      "email": "ew",
+      "password": "we",
+      "id": 8
+    },
+    {
+      "email": "ew",
+      "password": "we",
+      "id": 9
+    },
+    {
+      "email": "ew",
+      "password": "we",
+      "id": 10
+    },
+    {
+      "name": "Asylzhan",
+      "surname": "Ubaidullaev",
+      "email": "asyl@gmail.com",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "email": "asyl@gmail.com",
+      "password": "123",
+      "id": 12
+    },
+    {
+      "name": "Arlan",
+      "surname": "Daulen",
+      "email": "ew",
+      "password": "123",
+      "id": 13
+    },
+    {
+      "name": "wd",
+      "surname": "wd",
+      "email": "er@gmail.com",
+      "password": "123",
+      "id": 14
+    },
+    {
+      "name": "Arlan",
+      "surname": "wd",
+      "email": "er@gmail.com",
+      "password": "123",
+      "id": 15
+    },
+    {
+      "name": "wd",
+      "surname": "wd",
+      "email": "er@gmail.com",
+      "password": "123",
+      "plan": "Standard",
+      "id": 16
+    },
+    {
+      "name": "Rahma",
+      "surname": "Rahma",
+      "email": "rahma@gmail.com",
+      "password": "1",
+      "plan": "Basic",
+      "id": 17
+    },
+    {
+      "name": "Aliomar",
+      "surname": "Adilbekov",
+      "email": "ali@gmail.com",
+      "password": "123",
+      "plan": "Premium",
+      "id": 18
+    },
+    {
+      "name": "wd",
+      "surname": "wd",
+      "email": "ew",
+      "password": "we",
+      "plan": "Premium",
+      "id": 19
+    },
+    {
+      "email": "ert",
+      "password": "ert",
+      "id": 20
+    }
+  ]
+}
