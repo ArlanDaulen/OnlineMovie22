@@ -4,21 +4,17 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ContentComponent} from './components/content/content.component';
-import {RouterModule, Routes} from '@angular/router';
 import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {SearchPipe} from './components/content/search.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {PlanComponent} from './components/plan/plan.component';
 import {LoginComponent} from './components/login/login.component';
 import {RegistrationComponent} from './components/registration/registration.component';
-
-const appRoutes: Routes = [
-  {path: '', component: ContentComponent},
-  {path: 'plan', component: PlanComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registration', component: RegistrationComponent}
-];
+import { AuthGuard } from './guards/auth.guard';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MovieComponent } from './components/movie/movie.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 // @ts-ignore
 @NgModule({
@@ -26,19 +22,24 @@ const appRoutes: Routes = [
     AppComponent,
     ContentComponent,
     SearchPipe,
-    PlanComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HeaderComponent,
+    FooterComponent,
+    MovieComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

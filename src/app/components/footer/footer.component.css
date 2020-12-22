@@ -1,0 +1,155 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  height: 100px;
+  background: #112c38;
+}
+
+nav {
+  padding: 30px;
+  margin-left: 200px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1.5);
+  opacity: .2;
+  filter: blur(5px);
+}
+
+ul li a:hover {
+  transform: scale(1.7);
+  opacity: 1;
+  filter: blur(0);
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff497c;
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/*------------HEADER------*/
+
+.space {
+  background-color: #112c38;
+}
+/*------------FOOTER------*/
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+footer {
+  background-color: #112c38;
+  padding-top: 50px;
+  color: #b2b2b2;
+  margin: 0 auto;
+  height: 320px;
+  font-family: Arial;
+}
+
+.ft-top {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.all-row h4 {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+input {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  border-radius: 50px;
+}
+
+.input1 {
+  margin-bottom: 20px;
+}
+
+.input2 a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 5px 5px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s;
+
+}
+
+/*.column:last_child {*/
+/*  float: right;*/
+/*  display: block;*/
+/*  margin-top: 0;*/
+/*}*/
+
+.all-row .column {
+  margin-left: 60px;
+}
+
+.ft-bot {
+  text-align: center;
+}

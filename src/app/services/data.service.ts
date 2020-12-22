@@ -11,6 +11,8 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
+  movie: Movie;
+
   postUser(user: User){
     const body = {name: user.name, surname: user.surname, email: user.email, password: user.password, plan : user.plan};
     return this.http.post('http://localhost:3000/users', body);
@@ -21,6 +23,7 @@ export class DataService {
   }
 
   getUser(){
-    return this.http.get('db.json');
+    return this.http.get('http://localhost:3000/users');
   }
+
 }

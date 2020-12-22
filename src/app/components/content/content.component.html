@@ -1,42 +1,23 @@
-<div *ngIf="doneLog" class="container-log">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Email address" required="" autofocus="" [(ngModel)]="user.email"/>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required="" [(ngModel)]="user.password"/>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button  class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit(user)">Sign in</button>
-
-  </form>
-</div>
-
-<div *ngIf="done">
-  <div class="main-container">
+<div class="main-container">
     <div class="content">
       <div class="inner-content">
+        <!-- Search -->
         <div class="row">
           <input id="input" class="form-control mr-sm-2" placeholder="Search movie" aria-label="Search" [(ngModel)]="SearchMovie">
         </div>
         <!--List of movies-->
         <div class="sidebar" *ngFor="let list of category | search:SearchMovie">
-          <a class="a" href="#"><img [src]='list.url'/></a>
-          <a class="a" href="#">{{list.name}}</a>
+          <a class="a" routerLink="/movie" (click)="onSelect(list)"><img [src]='list.url'/></a>
+          <a class="a" routerLink="/movie" (click)="onSelect(list)">{{list.name}}</a>
         </div>
       </div>
       <!--Menu-->
       <div class="menu">
         <div class="inner-menu">
-          <a href="#" class="menuItem" *ngFor="let menu of menus; let i = index" (click)="check(i)">
+          <a routerLink="/content" class="menuItem" *ngFor="let menu of menus; let i = index" (click)="check(i)">
             {{menu | slice:1}}
           </a>
         </div>
       </div>
     </div>
-
-  </div>
 </div>

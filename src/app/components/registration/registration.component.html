@@ -7,30 +7,24 @@
 <body class="text-center">
 <div class="container">
   <div class="signup">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signup">
+      <h1 class="h3 mb-3 font-weight-normal" style="float: left">Please sign up</h1>
 
-    <label for="inputName" class="sr-only">Name</label>
-    <input type="email" id="inputName" class="form-control" formControlName="name" placeholder="Name" required="" autofocus="" [(ngModel)]="user.name"/>
+      <input type="text" class="form-control" formControlName="name" placeholder="Name.." required="Names is required" autofocus="" [(ngModel)]="user.name"/>
+      <br>
+      <input type="text" class="form-control" formControlName="surname" placeholder="Surname.." required="Surname is required" autofocus="" [(ngModel)]="user.surname"/>
+      <br>
+      <input type="email" class="form-control" formControlName="email" placeholder="Email address.." required="Email is required" autofocus="" [(ngModel)]="user.email"/>
+      <br>
+      <input type="password" class="form-control" formControlName="password" placeholder="Password.." required="Password is required" [(ngModel)]="user.password"/>
+      <br>
+      <input type="password" class="form-control" formControlName="password" placeholder="Repeat password.." required="Repeat password" autofocus="">
+      <br>
+    </form>
+  </div>
 
-    <label for="inputSurname" class="sr-only">Surname</label>
-    <input type="email" id="inputSurname" class="form-control" formControlName="surname" placeholder="Surname" required="" autofocus="" [(ngModel)]="user.surname"/>
 
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Email address" required="" autofocus="" [(ngModel)]="user.email"/>
-
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required="" [(ngModel)]="user.password"/>
-    <label for="inputPassword" class="sr-only">Repeat password</label>
-    <input type="password" id="inputPassword2" class="form-control" formControlName="password" placeholder="Repeat password" required="" autofocus="">
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-</div>
-    <div class="plan">
+  <div class="plan">
     <main class="container">
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Plan</h1>
@@ -51,7 +45,9 @@
                 <li>Email support</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-primary" name="Basic" (click)="Basic()">Subscribe</button>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary" name="Basic" (click)="Basic()">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
@@ -68,7 +64,9 @@
                 <li>Priority email support</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary" name="Standard" (click)="Standard()">Subscribe</button>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary" name="Standard" (click)="Standard()">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
@@ -85,27 +83,25 @@
                 <li>Phone and email support</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary" name="Premium" (click)="Premium()">Subscribe</button>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary" name="Premium" (click)="Premium()">Subscribe
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
-    </div>
+  </div>
 
 
-    <button (click)="submit(user)" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-    <p class="mt-5 mb-3 text-muted">{{date | date | uppercase}}</p>
+  <button (click)="submit(user)" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+  <p class="mt-5 mb-3 text-muted">{{date | date | uppercase}}</p>
 
-  </form>
 
   <div *ngIf="done">
     <div>Recieved:</div>
     <div>Name: {{receivedUser.name}}</div>
     <div>Surname: {{receivedUser.surname}}</div>
     <div>Email: {{receivedUser.email}}</div>
-  </div>
-</div>
   </div>
 </div>
 </body>

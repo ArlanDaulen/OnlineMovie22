@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
   submit(user: User){
     this.dataService.postUser(user)
             .subscribe(
-              (data: User) => {this.receivedUser = data; this.done = true;},
+              (data: User) => {this.receivedUser = data; this.done = true; console.log('Signed up')},
               error => console.log(error)
             );
   }

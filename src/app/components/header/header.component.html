@@ -1,0 +1,30 @@
+<div *ngIf="!this.authService.done" class="header">
+  <a routerLink="/content"><h1 style="float: left; color: red; margin-top: 27px; margin-left: 100px">DAFLIX</h1></a>
+  <div class = "container">
+    <div class="heading">
+      <nav>
+        <ul class="menu">
+          <li>
+            <a style="float: right; margin-left: 800px" routerLink="/registration">Registration</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="this.authService.done " class="header">
+  <h1 style="float: left; color: red; margin-top: 27px; margin-left: 100px">DAFLIX</h1>
+    <h3 style="float: left; color: red; margin-top: 35px; margin-left: 100px">Welcome, {{this.authService.name}}</h3>
+  <div class = "container">
+    <div class="heading">
+      <nav>
+        <ul class="menu">
+          <li>
+            <a style="float: right; margin-left: 800px" href="javascript: void(0);" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="conteiner">
+  <div class="content">
+
+    <div class="sidebar" *ngFor="let list of category; let i = index">
+      <div class="img" *ngIf="i == this.dataService.id">
+        <img [src]='list.url'/>
+      </div>
+    </div>
+
+    <div class="desc">
+
+    </div>
+
+    <div class="comment">
+
+    </div>
+  </div>
+</div>

@@ -3,6 +3,8 @@ import {DataService} from '../../services/data.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Movie} from '../../Movie';
 import {User} from '../../User';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-content',
@@ -10,41 +12,20 @@ import {User} from '../../User';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+
+  id: string;
+
   menus = ['/Adventure', '/Action', '/Horror', '/Comedy', '/Detective', '/Cartoon', '/Dramas', '/Documentary', '/Family'];
   SearchMovie = '';
-  name: string;
 
-  loginForm = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl()
-  });
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
-  onSubmit() {
-    console.log(this.loginForm.value);
-  }
-
-  constructor(private dataService: DataService) {
-  }
-
-  user: User = new User();
-  done: boolean = false;
-  doneLog: boolean = true;
-
-  submit(user: User){
-    this.dataService.postUser(user)
-            .subscribe(
-              (data: User) => {this.checkUser(this.user, data); this.done = true; this.doneLog = false},
-              error => console.log(error)
-            );
-  }
-
-  checkUser(user: User, data: User){
-    if(user.email = data.email){
-      console.log("Signed In!");
-    }else{
-      console.log("Error");
-    }
-  }
+   done: boolean = false;
+   doneLog: boolean = true;
 
   category: Movie [] = [];
 
@@ -81,6 +62,18 @@ export class ContentComponent implements OnInit {
         break;
     }
   }
+
+  logout(){
+    console.log('logout');
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
+  onSelect(item){
+    this.router.navigate(['/content', item.id]);
+    this.dataService.movie = item;
+  }
+
     ngOnInit(): void {
       this.dataService.getMovie().subscribe((data: Movie[]) => this.category = data["Adventure"]);
     }
